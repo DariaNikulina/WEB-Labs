@@ -465,6 +465,15 @@ p {
   color: #FF8A71;
 }
 
+.exceeding_expectation .exceeding_expectation__right .right__container  a:hover {
+  border-bottom: 1px solid #ff8a71;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
 .exceeding_expectation .exceeding_expectation__right .container__content_2 {
     /* Однако кровать для помощи в путешествии неприятна. Не мысли все осуществляют благословение. Снисхождение ко всему, радость, изменение бурной привязанности. Вечеринку мы лет на заказ разрешили. */
   width: 479px;
