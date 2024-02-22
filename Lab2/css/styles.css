@@ -1610,7 +1610,7 @@ opacity: 0.5;
   }
 }
 
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 750px) {
   a {
     font-size: 12px;
   }
