@@ -29,7 +29,8 @@
 body {
   background: #031b34;
   padding: 0 2rem;
-  overflow: auto;
+ /*  overflow: auto;*/
+  overflow-x: hidden;
 }
 
 body.oh {
@@ -1034,6 +1035,7 @@ button:hover {
   height: 950px;
   background: #031B34;
   margin: 0;
+
 }
 
 
@@ -1309,7 +1311,122 @@ opacity: 0.5;
 }
 
 /* Медиа запросы для адаптива */
+@media screen and (max-width: 1230px) {
+  
+ 
+  .blog_text{
+    width:90%;
+    margin-left:5%;
+  }
+  .blog_text .blog__right{
+    width:0%;
+  }
+  .blog_text .blog__left {
+    width:100%;
+    height: 60px;
+    padding-left: 5%;
+    padding-right: 2%;
+  }
+  .blog_text .blog__left .text_blog__left {
+    font-size: 36px;
+    width:100%;
+    height: 60px;
+    padding-left: 5%;
+    padding-right: 2%;
+  }
 
+  .blog{
+    display:flex;
+    flex-direction: column;
+  }
+  .blog .blog__middle{
+    flex-direction: row;
+  }
+  .blog .blog__right{
+    flex-direction: row;
+  }
+  .blog .blog__left .box_1 img{
+    width:90%;
+    margin-left:5%;
+  }
+  .blog .blog__left .box_1 .one_1 {
+    width:90%;
+    height: 25%;
+    margin-left:5%;
+  }
+  .blog .blog__left .box_1 .one_1 .text_1{
+    width:100%;
+    
+  }
+  .blog .blog__left .box_1 .one_1 a{
+    line-height: 0px;
+  }
+  .blog .blog__middle{
+    width:90%;
+    margin-left:5%;
+    height: 373px;
+  }
+  .blog .blog__middle .box_2{
+    height: 100%;
+    width: 50%;
+  }
+  .blog .blog__middle .box_2 img{
+    width: 100%;
+    height: 172.12px;
+  }
+  .blog .blog__middle .box_2 .one_2 {
+    width: 100%;
+  }
+  .blog .blog__middle .box_2 .one_2 .text_2 {
+    width: 100%;
+  }
+  .blog .blog__middle .box_3{
+    width: 50%;
+  }
+  .blog .blog__middle .box_3 img{
+    width: 100%;
+    height: 172.12px;
+  }
+  .blog .blog__middle .box_3 .one_3 {
+    width: 100%;
+  }
+  .blog .blog__middle .box_3 .one_3 .text_3 {
+    width: 100%;
+  }
+  .blog .blog__right {
+    width:90%;
+    margin-left:5%;
+    height: 400px;
+  }
+  .blog .blog__right .box_4{
+    width: 50%;
+  }
+  .blog .blog__right .box_4 img{
+    width: 100%;
+    height: 172.12px;
+  }
+  .blog .blog__right .box_4 .one_4 {
+    width: 100%;
+  }
+  .blog .blog__right .box_4 .one_4 .text_4 {
+    width: 100%;
+  }
+  .blog .blog__right .box_5{
+    width: 50%;
+  }
+  .blog .blog__right .box_5 img{
+    width: 100%;
+    height: 172.12px;
+  }
+  .blog .blog__right .box_5 .one_5 {
+    width: 100%;
+  }
+  .blog .blog__right .box_5 .one_5 .text_5 {
+    width: 100%;
+  }
+  
+
+}
 @media screen and (max-width: 1024px) {
   .header {
     flex-direction: column;
@@ -1446,7 +1563,7 @@ opacity: 0.5;
     padding-right: 2%;
   }
   .blog_text .blog__left .text_blog__left {
-    font-size: 34px;
+    font-size: 30px;
     width:100%;
     height: 60px;
     padding-left: 5%;
@@ -1547,7 +1664,67 @@ opacity: 0.5;
   }
 
 }
-
+@media screen and (max-width: 990px) {
+  .footer {
+    height: 470px;
+  }
+  .footer .footer_end {
+    font-size: 36px;
+    padding: 5px 204px 60px;
+  }
+  .footer .colonki {
+    column-gap: 0rem;
+    margin-top: 4rem;
+    margin-right: 1rem;
+    margin-bottom: 0px;
+  }
+  .footer .colonki .gpt {
+    width: 170px;
+    height: 48px;
+  }
+  .footer .colonki .gpt .gpt_1 {
+    width: 160px;
+    height: 48px;
+  }
+  .footer .colonki .gpt .gpt_2 {
+    width: 160px;
+  }
+  .footer .colonki .silki {
+    width: 120px;
+  }
+  .footer .colonki .kompan {
+    width: 170px;
+  }
+  .footer .colonki .kompan .kompan_2{
+    width: 170px;
+    height: 35px;
+  }
+  .footer .colonki .kompan .kompan_3{
+    width: 170px;
+    height: 35px;
+  }
+  .footer .colonki .silki .silki_1 {
+    width: 120px;
+    height: 48px;
+  }
+  .footer .colonki .silki .silki_2{
+    width: 120px;
+    height: 35px;
+  }
+  .footer .colonki .silki .silki_3{
+    width: 120px;
+    height: 35px;
+  }
+  .footer .colonki .silki .silki_4{
+    width: 120px;
+    height: 35px;
+  }
+  .footer .colonki .silki .silki_5{
+    width: 120px;
+    height: 35px;
+  }
+  
+}
 @media screen and (max-width: 766px) {
   p {
     font-size: 14px;
@@ -1623,10 +1800,11 @@ opacity: 0.5;
     padding-right: 1%;
   }
   .blog_text .blog__left .text_blog__left {
-    font-size: 26px;
+    font-size: 24px;
     padding-left: 2%;
   }
   .blog {
+    margin-top: 0px;
     margin-bottom: 25px;
   }
   .begin .begin_colon .begin__right .start_button button {
@@ -1635,61 +1813,7 @@ opacity: 0.5;
   .footer {
     height: 470px;
   }
-  .footer .footer_end {
-    font-size: 36px;
-    padding: 5px 204px 60px;
-  }
-  .footer .colonki {
-    column-gap: 0rem;
-    margin-top: 4rem;
-    margin-right: 1rem;
-    margin-bottom: 0px;
-  }
-  .footer .colonki .gpt {
-    width: 170px;
-    height: 48px;
-  }
-  .footer .colonki .gpt .gpt_1 {
-    width: 160px;
-    height: 48px;
-  }
-  .footer .colonki .gpt .gpt_2 {
-    width: 160px;
-  }
-  .footer .colonki .silki {
-    width: 120px;
-  }
-  .footer .colonki .kompan {
-    width: 170px;
-  }
-  .footer .colonki .kompan .kompan_2{
-    width: 170px;
-    height: 35px;
-  }
-  .footer .colonki .kompan .kompan_3{
-    width: 170px;
-    height: 35px;
-  }
-  .footer .colonki .silki .silki_1 {
-    width: 120px;
-    height: 48px;
-  }
-  .footer .colonki .silki .silki_2{
-    width: 120px;
-    height: 35px;
-  }
-  .footer .colonki .silki .silki_3{
-    width: 120px;
-    height: 35px;
-  }
-  .footer .colonki .silki .silki_4{
-    width: 120px;
-    height: 35px;
-  }
-  .footer .colonki .silki .silki_5{
-    width: 120px;
-    height: 35px;
-  }
+  
 }
 
 @media screen and (max-width: 750px) {
@@ -1732,4 +1856,38 @@ opacity: 0.5;
   .future_here .future_here__right {
     row-gap: 2rem;
   }
+  .blog {
+    margin-top: 0px;
+  }
+  .footer .footer_end {
+    font-size: 30px;
+  }
+  .exceeding_expectation{
+    flex-direction: column;
+  }
+
+  .exceeding_expectation .exceeding_expectation__left{
+    width:100%;
+  }
+  .exceeding_expectation .exceeding_expectation__right{
+    width:100%;
+  }
+
+  .exceeding_expectation .exceeding_expectation__right .right__container{
+    width:100%;
+    margin-bottom: 0px;
+    
+  }
+
+  .exceeding_expectation .exceeding_expectation__right .right__container .right__header{
+    width:100%;
+    height: 60px;
+  }
+  .exceeding_expectation .exceeding_expectation__right .right__container .container__content_2{
+    width:100%;
+    height: 100px;
+  }
+
+  
+
 }
