@@ -1,5 +1,6 @@
 // вешаем на окно прослушку загрузки DOM-дерева
 // по окнчании загрузки, будет запущена функция
+/*
 window.onload = () => {
     // ищем ноды (элементы DOM-дерева) для их получения для последующих манипуляций
     const burgerNode = document.querySelector(".header__burger_menu");
@@ -65,4 +66,4 @@ window.onload = () => {
   
     // вешаем прослушку на клик по кнопке "Закрыть меню"
     closeMenuNode.addEventListener("click", handleCloseMenu);
-  };
+  };*/
