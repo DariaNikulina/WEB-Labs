@@ -1430,6 +1430,7 @@ opacity: 0.5;
 @media screen and (max-width: 1024px) {
   .header {
     flex-direction: column;
+   
   }
   
 }
@@ -1460,6 +1461,7 @@ opacity: 0.5;
     height: 100vh;
     z-index: 9999;
     background: #031b34;
+    
   }
 
   .header .header__menu {
