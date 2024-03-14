@@ -1,0 +1,1895 @@
+/* Подключение шрифтов */
+@font-face {
+  font-family: "ManropeBold";
+  src: url(../fonts/Manrope-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url(../fonts/Manrope-Regular.ttf);
+}
+
+@font-face {
+  font-family: "ManropeLight";
+  src: url(../fonts/Manrope-Light.ttf);
+}
+
+/* Сброс базовых стилей */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  outline: none;
+}
+
+/* Общие стили для всего приложения */
+
+body {
+  background: #031b34;
+  padding: 0 2rem;
+ /*  overflow: auto;*/
+  overflow-x: hidden;
+}
+
+body.oh {
+  overflow: hidden;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a,
+button {
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+
+a:hover,
+button:hover {
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+
+button:hover {
+  background-color: #ae67fa;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 60px;
+  color: #ae67fa;
+}
+
+h2 {
+  font-size: 34px;
+}
+
+h1,
+h2 {
+  font-family: "ManropeBold", sans-serif;
+  background: linear-gradient(90deg, #ae67fa 1.84%, #f49867 102.67%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h3 {
+  font-family: "ManropeBold", sans-serif;
+  color: #fff;
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
+  color: #fff;
+}
+
+.btn {
+  display: flex;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.primary-btn {
+  background-color: #ff4820;
+}
+
+.section {
+  max-width: 1169px;
+  width: 100%;
+}
+
+.lined_header {
+  background: url("../assets/img/gradient_line.svg") no-repeat 0 0 transparent;
+  padding: 1rem 0;
+}
+
+/* Стили для Шапки */
+
+.header {
+  display: flex;
+  max-width: 1169px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2rem 0;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  background: #031b34;
+}
+
+.header .header__logo .logo__link {
+  display: flex;
+  align-items: center;
+}
+
+.header .header__menu .menu {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.header .header__right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 2rem;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.header .header__right.hidden {
+  opacity: 0;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  visibility: hidden;
+}
+
+.header .header__right .menu__close {
+  width: 38px;
+  height: 38px;
+}
+
+.header .header__right .menu__close.hidden {
+  display: none;
+}
+
+.header .header__menu .menu .menu__item a {
+  color: #fff;
+  border-bottom: 1px solid transparent;
+}
+
+.header .header__menu .menu .menu__item:hover a {
+  border-bottom-color: #fff;
+}
+
+.header .header__menu .menu .menu__item.active a {
+  color: #f49867;
+  border-bottom-color: #f49867;
+}
+
+.header .header__burger_menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  cursor: pointer;
+}
+
+.header .header__burger_menu.hidden {
+  display: none;
+}
+
+.header .header__burger_menu .burger_menu__line,
+.header .header__right .menu__close .menu__line {
+  width: 43px;
+  height: 5px;
+  border-radius: 2px;
+  background: #fff;
+}
+
+.header .header__right .menu__close .menu__line:nth-child(1) {
+  position: relative;
+  top: 15px;
+  right: 4px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+.header .header__right .menu__close .menu__line:nth-child(2) {
+  position: relative;
+  top: 10px;
+  right: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
+
+.header .cta_buttons {
+  display: flex;
+  column-gap: 1rem;
+}
+
+/* Стили для первого экрана (Хиро секция) */
+
+.hero_section {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 1rem;
+  /* min-height: 60vh; */
+  margin: 14rem 0 3rem;
+}
+
+.hero_section .hero_section__left {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 3rem;
+  width: 75%;
+}
+
+.hero_section .hero_section__left .left__description {
+  color: #81afdd;
+}
+
+.hero_section .hero_section__left .left__cta_buttons {
+  display: flex;
+  width: 100%;
+}
+
+.hero_section .hero_section__left .left__cta_buttons input[type="text"] {
+  min-width: 250px;
+  width: 70%;
+  padding: 8px 32px;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #052d56;
+  border-bottom: none;
+  background-color: #052d56;
+}
+
+.hero_section .hero_section__left .left__cta_buttons .btn {
+  border-radius: 0 4px 4px 0;
+}
+
+.hero_section .hero_section__right {
+  height: 100%;
+}
+
+.hero_section .hero_section__right img {
+  width: 100%;
+}
+
+/* Секция брендов */
+
+.brands_section {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 6rem 0;
+  column-gap: 3rem;
+}
+
+/* Что такое Chat GPT */
+
+.what_is_chatgpt_section {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  margin: 6rem 0;
+  row-gap: 7rem;
+  background: url(../assets/img/what_is_gpt_3_bg.svg) no-repeat 0 0 / cover;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__top {
+  display: flex;
+  column-gap: 3rem;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__top .top__header {
+  flex: 30%;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__top .top__content {
+  flex: 65%;
+  color: #81afdd;
+  font-size: 14px;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__middle .middle__header {
+  width: 500px;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__middle a {
+  color: #ff8a71;
+  font-size: 16px;
+  border-bottom: 1px solid transparent;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__middle a:hover {
+  border-bottom: 1px solid #ff8a71;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  column-gap: 2rem;
+}
+
+.what_is_chatgpt_section .what_is_chatgpt_section__bottom .bottom__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.what_is_chatgpt_section
+  .what_is_chatgpt_section__bottom
+  .bottom__container
+  .container__content {
+  color: #81afdd;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Будущее наступило */
+
+.future_here {
+  display: flex;
+  column-gap: 6rem;
+  margin: 6rem 0 2rem;
+}
+
+.future_here .future_here__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 2rem;
+  flex: 2;
+}
+
+/* .future_here .future_here__left .left__header {
+} */
+
+.future_here .future_here__left .left__cta {
+  color: #f49867;
+  border-bottom: 1px solid transparent;
+}
+
+.future_here .future_here__left a:hover {
+  border-bottom: 1px solid #f49867;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.future_here .future_here__right {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+
+.future_here .future_here__right .right__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.future_here .future_here__right .right__container .container__header {
+  width: 35%;
+}
+
+.future_here .future_here__right .right__container .container__content {
+  width: 55%;
+  color: #81afdd;
+}
+
+/* Стили для четвертого экрана (Превосходя все ожидания) */
+
+.exceeding_expectation {
+  display: flex;
+  column-gap: 0rem;
+  min-height: 0vh;
+  margin: 4rem 0 3rem;
+  align-items: flex-end;
+  align-content: space-between;
+  width: 100%;
+  margin-left: 10%;
+}
+
+.exceeding_expectation .exceeding_expectation__left {
+  height: 100%;
+  width: 40%;
+}
+
+.exceeding_expectation .exceeding_expectation__left img {
+  width: 100%;
+}
+
+.exceeding_expectation .exceeding_expectation__right {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 3rem;
+  width: 50%;
+}
+
+.exceeding_expectation .exceeding_expectation__right .container__content_1 {
+    /* Запроси ранний доступ */
+  width: 183px;
+  height: 48px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  /* identical to box height, or 188% */
+  color: #71E5FF;
+}
+.exceeding_expectation .exceeding_expectation__right .right__header {
+  /* Превосходя все ожидания */
+  width: 426px;
+  height: 109px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 45px;
+  /* or 132% */
+  background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%), #FFFFFF;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.exceeding_expectation .exceeding_expectation__right .right__cta {
+  width: 200px;
+  height: 147px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  /* identical to box height, or 188% */
+  color: #FF8A71;
+}
+
+.exceeding_expectation .exceeding_expectation__right .right__container  a:hover {
+  border-bottom: 1px solid #ff8a71;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.exceeding_expectation .exceeding_expectation__right .container__content_2 {
+    /* Однако кровать для помощи в путешествии неприятна. Не мысли все осуществляют благословение. Снисхождение ко всему, радость, изменение бурной привязанности. Вечеринку мы лет на заказ разрешили. */
+  width: 479px;
+  height: 141px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  /* or 188% */
+  color: #81AFDD;
+}
+
+/* Стили для пятого экрана (Регистрация и ...) */
+
+.begin {
+  /* Rectangle 26 */
+  box-sizing: border-box;
+  width: 100%;
+  height: 172.65px;
+  background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10.7236px;
+  margin: 10rem;
+}
+
+.begin .begin_colon{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  row-gap: 0rem 2rem;
+  width: 90%;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.begin .begin_colon .begin__left{
+  width: 100%;
+}
+
+.begin .begin_colon .begin__left .text_1{
+  /* Запросите ранний доступ */
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 30px;
+  /* or 250% */
+  color: #0E0E0E;
+  margin: -1rem 2rem;
+}
+
+.begin .begin_colon .begin__left .text_2{
+  /* Зарегистрируйтесь и начните исследовать безграничные возможности. */
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 35px;
+  /* or 146% */
+  color: #000000;
+  margin: 1rem 2rem;
+}
+
+.begin .begin_colon .begin__right{
+  /* display: flex;
+  width: 30%; */
+  display: flex;
+  width: 70%;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: row-reverse;
+}
+
+
+.begin .begin_colon .begin__right .start_button {
+  /* Начать */
+  font-family: 'Manrope';
+  font-style: normal;
+  color: #FFFFFF;
+  font-size: large;
+}
+.begin .begin_colon .begin__right .start_button a {
+  color: #FFFFFF;
+  text-decoration: none;
+  cursor: pointer;
+ 
+}
+
+
+
+.begin .begin_colon .begin__right .start_button button {
+  width: 189.14px;
+  height: 59.4px;
+  margin-right: -50px;
+  background-color: #000000;
+  color: #FFFFFF;
+  border-radius: 40px;
+}
+
+.begin .begin_colon .begin__right .start_button a,
+button {
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  
+}
+
+.begin .begin_colon .begin__right a:hover,
+button:hover {
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+
+.begin .begin_colon .begin__right button:hover {
+  background-color: #ae67fa;
+
+}
+
+
+
+/* Стили для ТЕКСТА шестого экрана (Блог) */
+
+.blog_text {
+  display: flex;
+  column-gap: 2rem;
+  min-height: 0vh;
+  align-items: flex-end;
+  align-content: space-between;
+}
+
+.blog_text .blog__left {
+  height: 100%;
+}
+
+.blog_text .blog__left .text_blog__left{
+  /* Многое Происходит, Мы Ведем об Этом Блог. */
+  height: 150px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 62px;
+  line-height: 75px;
+  letter-spacing: -0.04em;
+  background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.blog_text .blog__right {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 3rem;
+  width: 75%;
+}
+
+/* Стили для шестого экрана (Блог) */
+
+.blog {
+  display: flex;
+  column-gap: 3rem;
+  min-height: 30vh;
+  align-items: stretch;
+  align-content: stretch;
+  margin: 6rem 4rem 6rem 4rem;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.blog .blog__left {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 3rem;
+  width: 100%;
+}
+
+.blog .blog__left .box_1 {
+  height: 100%;
+}
+
+.blog .blog__left .box_1 img {
+  width: 100%;
+}
+
+.blog .blog__left .box_1 .one_1 {
+  /* Rectangle 20 */
+  width: 417.03px;
+  height: 407.27px;
+  background: #042C54;
+  padding: 2rem;
+
+}
+
+.blog .blog__left .box_1 .one_1 .text_start_1{
+  /* Сент 26, 2021 */
+  width: 357px;
+  height: 35px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 11.649px;
+  line-height: 35px;
+  /* identical to box height, or 300% */
+  color: #FFFFFF;
+}
+
+.blog .blog__left .box_1 .one_1 .text_1{
+  /* GPT-3 и Openai – это будущее. Давайте разберемся, как это? */
+  width: 342.18px;
+  height: 90.86px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 25.11px;
+  line-height: 30px;
+  /* or 121% */
+  color: #FFFFFF;
+}
+
+.blog .blog__left .box_1 .one_1 a{
+  /* Читать полную статью */
+  /* position: absolute; */
+  width: 148px;
+  height: 35px;
+  left: 561px;
+  top: 4405px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 400px;
+  /* identical to box height, or 291% */
+  color: #FFFFFF;
+}
+
+.blog .blog__left .box_1 .one_1 a:hover{
+  border-bottom: 1px solid #ffffff;
+}
+
+
+.blog .blog__middle {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 2rem;
+  width: 75%;
+}
+
+.blog .blog__left .box_2 {
+  height: 100%;
+}
+
+.blog .blog__left .box_2 img {
+  width: 100%;
+}
+
+.blog .blog__middle .box_2 .one_2{
+  /* Rectangle 20 */
+  /* Rectangle 21 */
+  width: 327.34px;
+  height: 193.37px;
+  background: #042C54;
+  padding: 1rem 1.5rem;
+}
+
+.blog .blog__middle .box_2 .one_2 .text_start_2{
+  /* Сент 26, 2021 */
+  width: 284px;
+  height: 35px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 11.649px;
+  line-height: 35px;
+  /* identical to box height, or 300% */
+  color: #FFFFFF;
+}
+
+.blog .blog__middle .box_2 .one_2 .text_2{
+  /* GPT-3 и Openai – это будущее. Давайте разберемся, как это? */
+  width: 284.23px;
+  height: 90.86px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 19px;
+  line-height: 30px;
+  /* or 159% */
+  color: #FFFFFF;
+}
+
+.blog .blog__middle .box_2 .one_2 a{
+  /* Читать полную статью */
+  width: 284px;
+  height: 35px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 35px;
+  /* identical to box height, or 291% */
+  color: #FFFFFF;
+}
+.blog .blog__middle .box_2 .one_2 a:hover{
+  border-bottom: 1px solid #ffffff;
+}
+
+.blog .blog__left .box_3 {
+  height: 100%;
+}
+
+.blog .blog__left .box_3 img {
+  width: 100%;
+}
+
+.blog .blog__middle .box_3 .one_3{
+  /* Rectangle 20 */
+  /* Rectangle 21 */
+  width: 327.34px;
+  height: 193.37px;
+  background: #042C54;
+  padding: 1rem 1.5rem;
+}
+
+.blog .blog__middle .box_3 .one_3 .text_start_3{
+  /* Сент 26, 2021 */
+  width: 284px;
+  height: 35px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 11.649px;
+  line-height: 35px;
+  /* identical to box height, or 300% */
+  color: #FFFFFF;
+}
+
+.blog .blog__middle .box_3 .one_3 .text_3{
+  /* GPT-3 и Openai – это будущее. Давайте разберемся, как это? */
+  width: 284.23px;
+  height: 90.86px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 19px;
+  line-height: 30px;
+  /* or 159% */
+  color: #FFFFFF;
+}
+
+.blog .blog__middle .box_3 .one_3 a{
+  /* Читать полную статью */
+  width: 284px;
+  height: 35px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 35px;
+  /* identical to box height, or 291% */
+  color: #FFFFFF;
+}
+
+.blog .blog__middle .box_3 .one_3 a:hover{
+  border-bottom: 1px solid #ffffff;
+}
+
+
+.blog .blog__right {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 2rem;
+  width: 75%;
+}
+
+.blog .blog__right .box_4 {
+  height: 100%;
+}
+
+.blog .blog__right .box_4 img {
+  width: 100%;
+}
+
+.blog .blog__right .box_4 .one_4{
+  /* Rectangle 20 */
+  /* Rectangle 21 */
+  width: 327.34px;
+  height: 193.37px;
+  background: #042C54;
+  padding: 1rem 1.5rem;
+}
+
+.blog .blog__right .box_4 .one_4 .text_start_4{
+  /* Сент 26, 2021 */
+  width: 284px;
+  height: 35px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 11.649px;
+  line-height: 35px;
+  /* identical to box height, or 300% */
+  color: #FFFFFF;
+}
+
+.blog .blog__right .box_4 .one_4 .text_4{
+  /* GPT-3 и Openai – это будущее. Давайте разберемся, как это? */
+  width: 284.23px;
+  height: 90.86px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 19px;
+  line-height: 30px;
+  /* or 159% */
+  color: #FFFFFF;
+}
+
+.blog .blog__right .box_4 .one_4 a{
+  /* Читать полную статью */
+  width: 284px;
+  height: 35px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 35px;
+  /* identical to box height, or 291% */
+  color: #FFFFFF;
+}
+
+.blog .blog__right .box_4 .one_4 a:hover{
+  border-bottom: 1px solid #ffffff;
+}
+.blog .blog__right .box_5 {
+  height: 100%;
+}
+
+.blog .blog__right .box_5 img {
+  width: 100%;
+}
+
+.blog .blog__right .box_5 .one_5{
+  /* Rectangle 20 */
+  /* Rectangle 21 */
+  width: 327.34px;
+  height: 193.37px;
+  background: #042C54;
+  padding: 1rem 1.5rem;
+}
+
+.blog .blog__right .box_5 .one_5 .text_start_5{
+  /* Сент 26, 2021 */
+  width: 284px;
+  height: 35px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 11.649px;
+  line-height: 35px;
+  /* identical to box height, or 300% */
+  color: #FFFFFF;
+}
+
+.blog .blog__right .box_5 .one_5 .text_5{
+  /* GPT-3 и Openai – это будущее. Давайте разберемся, как это? */
+  width: 284.23px;
+  height: 90.86px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 19px;
+  line-height: 30px;
+  /* or 159% */
+  color: #FFFFFF;
+}
+
+.blog .blog__right .box_5 .one_5 a{
+  /* Читать полную статью */
+  width: 284px;
+  height: 35px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 35px;
+  /* identical to box height, or 291% */
+  color: #FFFFFF;
+}
+.blog .blog__right .box_5 .one_5 a:hover{
+  border-bottom: 1px solid #ffffff;
+}
+.footer{
+  /* Background */
+  width: 1440px;
+  height: 950px;
+  background: #031B34;
+  margin: 0;
+
+}
+
+
+.footer .footer_end{
+  /* Хотите Шагнуть в Будущее Раньше Других? */
+  font-family: 'Manrope';
+  font-size: 62px;
+  line-height: 75px;
+  letter-spacing: -0.04em;
+  padding: 15rem 17rem 5rem 17rem;
+  align-self: center;
+  /* Хотите Шагнуть в Будущее Раньше Других? */
+  font-style: normal;
+  text-align: center;
+}
+
+.footer .footer_button{
+  /* Fill */
+  box-sizing:border-box;
+  border-style: hidden;
+  border-color: #031B34;
+  border: 1px solid #FFFFFF;
+  margin-left:37%;
+  margin-right: 37%;
+  text-align: center;
+}
+
+.footer .footer_button a{
+  cursor: pointer;
+}
+
+.footer .footer_button button{
+  cursor: pointer;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 1400;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #FFFFFF;
+  opacity: 0.8;
+  padding: 1rem 0rem 1rem 0rem;
+  background-color: #031B34;
+  border-color: none;
+  width:100%;
+}
+.footer .footer_button a:hover,button:hover{
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  
+}
+
+.footer .footer_button button:hover{
+  background-color: #ae67fa;
+}
+
+.footer .colonki{
+  display: flex;
+  column-gap: 4rem;
+  min-height: 30vh;
+  align-items: stretch;
+  align-content: stretch;
+  margin: 6rem 4rem 6rem 4rem;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footer .colonki .gpt{
+
+}
+
+.footer .colonki .gpt .gpt_1{
+  width: 186px;
+  height: 48px;
+}
+
+.footer .colonki .gpt .gpt_2{
+  /* ул. Профессора Поздеева, 13, к.Г, Пермь, Пермский край, 614013 Все права защищены */
+width: 186px;
+height: 48px;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 300;
+font-size: 12px;
+line-height: 16px;
+color: #FFFFFF;
+opacity: 0.5;
+}
+
+.footer .colonki .silki{
+  
+}
+.footer .colonki .silki a:hover{
+  border-bottom: 1px solid #FFFFFF;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.footer .colonki .silki .silki_1{
+  width: 186px;
+  height: 48px;
+}
+
+.footer .colonki .silki .silki_2{
+  width: 186px;
+  height: 48px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.footer .colonki .silki .silki_3{
+  width: 186px;
+  height: 48px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.footer .colonki .silki .silki_4{
+  width: 186px;
+  height: 48px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.footer .colonki .silki .silki_5{
+  width: 186px;
+  height: 48px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.footer .colonki .kompan a:hover{
+  border-bottom: 1px solid #FFFFFF;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  
+}
+
+.footer .colonki .kompan .kompan_1{
+  width: 186px;
+  height: 48px;
+}
+
+.footer .colonki .kompan .kompan_2{
+  width: 186px;
+  height: 48px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.footer .colonki .kompan .kompan_3{
+  width: 186px;
+  height: 48px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.footer .colonki .kompan .kompan_4{
+  width: 186px;
+  height: 48px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.footer .colonki .kontakt a:hover{
+  border-bottom: 1px solid #FFFFFF;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  
+}
+
+.footer .colonki .kontakt .kontakt_1{
+  width: 186px;
+  height: 48px;
+}
+
+.footer .colonki .kontakt .kontakt_2{
+  width: 186px;
+  height: 48px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.footer .colonki .kontakt .kontakt_3{
+  width: 186px;
+  height: 48px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.footer .colonki .kontakt .kontakt_4{
+  width: 186px;
+  height: 48px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.end {
+  height: 100%;
+}
+
+.end .text_end{
+  /* © 2023 GPT-3. Все права защищены. */
+  height: 16px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+}
+
+/* Медиа запросы для адаптива */
+@media screen and (max-width: 1230px) {
+  
+ 
+  .blog_text{
+    width:90%;
+    margin-left:5%;
+  }
+  .blog_text .blog__right{
+    width:0%;
+  }
+  .blog_text .blog__left {
+    width:100%;
+    height: 60px;
+    padding-left: 5%;
+    padding-right: 2%;
+  }
+  .blog_text .blog__left .text_blog__left {
+    font-size: 36px;
+    width:100%;
+    height: 60px;
+    padding-left: 5%;
+    padding-right: 2%;
+  }
+
+  .blog{
+    display:flex;
+    flex-direction: column;
+  }
+  .blog .blog__middle{
+    flex-direction: row;
+  }
+  .blog .blog__right{
+    flex-direction: row;
+  }
+  .blog .blog__left .box_1 img{
+    width:90%;
+    margin-left:5%;
+  }
+  .blog .blog__left .box_1 .one_1 {
+    width:90%;
+    height: 25%;
+    margin-left:5%;
+  }
+  .blog .blog__left .box_1 .one_1 .text_1{
+    width:100%;
+    
+  }
+  .blog .blog__left .box_1 .one_1 a{
+    line-height: 0px;
+  }
+  .blog .blog__middle{
+    width:90%;
+    margin-left:5%;
+    height: 373px;
+  }
+  .blog .blog__middle .box_2{
+    height: 100%;
+    width: 50%;
+  }
+  .blog .blog__middle .box_2 img{
+    width: 100%;
+    height: 172.12px;
+  }
+  .blog .blog__middle .box_2 .one_2 {
+    width: 100%;
+  }
+  .blog .blog__middle .box_2 .one_2 .text_2 {
+    width: 100%;
+  }
+  .blog .blog__middle .box_3{
+    width: 50%;
+  }
+  .blog .blog__middle .box_3 img{
+    width: 100%;
+    height: 172.12px;
+  }
+  .blog .blog__middle .box_3 .one_3 {
+    width: 100%;
+  }
+  .blog .blog__middle .box_3 .one_3 .text_3 {
+    width: 100%;
+  }
+  .blog .blog__right {
+    width:90%;
+    margin-left:5%;
+    height: 400px;
+  }
+  .blog .blog__right .box_4{
+    width: 50%;
+  }
+  .blog .blog__right .box_4 img{
+    width: 100%;
+    height: 172.12px;
+  }
+  .blog .blog__right .box_4 .one_4 {
+    width: 100%;
+  }
+  .blog .blog__right .box_4 .one_4 .text_4 {
+    width: 100%;
+  }
+  .blog .blog__right .box_5{
+    width: 50%;
+  }
+  .blog .blog__right .box_5 img{
+    width: 100%;
+    height: 172.12px;
+  }
+  .blog .blog__right .box_5 .one_5 {
+    width: 100%;
+  }
+  .blog .blog__right .box_5 .one_5 .text_5 {
+    width: 100%;
+  }
+  
+
+}
+@media screen and (max-width: 1024px) {
+  .header {
+    flex-direction: column;
+   
+  }
+  
+}
+@media screen and (max-width: 1024px) {
+  .page {
+    align-content: center;
+  }
+
+  .header {
+    padding: 2rem;
+  }
+
+  .header .header__logo .logo__link img {
+    width: 200%;
+  }
+
+  .header .header__right {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    row-gap: 53px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    background: #031b34;
+    
+  }
+
+  .header .header__menu {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .header .header__menu .menu {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+  }
+
+  .header .header__menu .menu__close {
+    position: absolute;
+    right: -100px;
+    top: -100px;
+  }
+
+  .header .header__menu .menu .menu__item a {
+    font-size: 48px;
+  }
+
+  .hero_section {
+    flex-direction: column;
+    justify-content: center;
+    column-gap: 0;
+    /* margin: 0; */
+    width: 90%;
+  }
+
+  .hero_section .hero_section__left {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero_section .hero_section__right {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero_section .hero_section__right img {
+    width: 60%;
+  }
+
+  .hero_section .hero_section__left .left__cta_buttons {
+    justify-content: center;
+  }
+
+  .what_is_chatgpt_section {
+    row-gap: 4rem;
+  }
+
+  .what_is_chatgpt_section .what_is_chatgpt_section__middle {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  .what_is_chatgpt_section .what_is_chatgpt_section__bottom .bottom__container {
+    row-gap: 0;
+  }
+
+  .future_here {
+    column-gap: 0;
+    flex-direction: column;
+    row-gap: 4rem;
+  }
+
+  .future_here .future_here__left {
+    row-gap: 1rem;
+  }
+  
+  .exceeding_expectation{
+    margin-left: 0%;
+    margin-bottom: 0%;
+  }
+  .exceeding_expectation .exceeding_expectation__left {
+    height: 100%;
+    width: 45%;
+  }
+  .begin {
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+  .begin .begin_colon .begin__left .text_2{
+    font-size: 20px;
+    
+  }
+  .blog_text{
+    width:90%;
+    margin-left:5%;
+  }
+  .blog_text .blog__right{
+    width:0%;
+  }
+  .blog_text .blog__left {
+    width:100%;
+    height: 60px;
+    padding-left: 5%;
+    padding-right: 2%;
+  }
+  .blog_text .blog__left .text_blog__left {
+    font-size: 30px;
+    width:100%;
+    height: 60px;
+    padding-left: 5%;
+    padding-right: 2%;
+  }
+
+  .blog{
+    display:flex;
+    flex-direction: column;
+  }
+  .blog .blog__middle{
+    flex-direction: row;
+  }
+  .blog .blog__right{
+    flex-direction: row;
+  }
+  .blog .blog__left .box_1 img{
+    width:90%;
+    margin-left:5%;
+  }
+  .blog .blog__left .box_1 .one_1 {
+    width:90%;
+    height: 25%;
+    margin-left:5%;
+  }
+  .blog .blog__left .box_1 .one_1 .text_1{
+    width:100%;
+    
+  }
+  .blog .blog__left .box_1 .one_1 a{
+    line-height: 0px;
+  }
+  .blog .blog__middle{
+    width:90%;
+    margin-left:5%;
+    height: 373px;
+  }
+  .blog .blog__middle .box_2{
+    height: 100%;
+    width: 50%;
+  }
+  .blog .blog__middle .box_2 img{
+    width: 100%;
+    height: 172.12px;
+  }
+  .blog .blog__middle .box_2 .one_2 {
+    width: 100%;
+  }
+  .blog .blog__middle .box_2 .one_2 .text_2 {
+    width: 100%;
+  }
+  .blog .blog__middle .box_3{
+    width: 50%;
+  }
+  .blog .blog__middle .box_3 img{
+    width: 100%;
+    height: 172.12px;
+  }
+  .blog .blog__middle .box_3 .one_3 {
+    width: 100%;
+  }
+  .blog .blog__middle .box_3 .one_3 .text_3 {
+    width: 100%;
+  }
+  .blog .blog__right {
+    width:90%;
+    margin-left:5%;
+    height: 400px;
+  }
+  .blog .blog__right .box_4{
+    width: 50%;
+  }
+  .blog .blog__right .box_4 img{
+    width: 100%;
+    height: 172.12px;
+  }
+  .blog .blog__right .box_4 .one_4 {
+    width: 100%;
+  }
+  .blog .blog__right .box_4 .one_4 .text_4 {
+    width: 100%;
+  }
+  .blog .blog__right .box_5{
+    width: 50%;
+  }
+  .blog .blog__right .box_5 img{
+    width: 100%;
+    height: 172.12px;
+  }
+  .blog .blog__right .box_5 .one_5 {
+    width: 100%;
+  }
+  .blog .blog__right .box_5 .one_5 .text_5 {
+    width: 100%;
+  }
+  .footer .footer_end {
+    padding: 100px 204px 60px;
+  }
+
+}
+@media screen and (max-width: 990px) {
+  .footer {
+    height: 470px;
+  }
+  .footer .footer_end {
+    font-size: 36px;
+    padding: 5px 204px 60px;
+  }
+  .footer .colonki {
+    column-gap: 0rem;
+    margin-top: 4rem;
+    margin-right: 1rem;
+    margin-bottom: 0px;
+  }
+  .footer .colonki .gpt {
+    width: 170px;
+    height: 48px;
+  }
+  .footer .colonki .gpt .gpt_1 {
+    width: 160px;
+    height: 48px;
+  }
+  .footer .colonki .gpt .gpt_2 {
+    width: 160px;
+  }
+  .footer .colonki .silki {
+    width: 120px;
+  }
+  .footer .colonki .kompan {
+    width: 170px;
+  }
+  .footer .colonki .kompan .kompan_2{
+    width: 170px;
+    height: 35px;
+  }
+  .footer .colonki .kompan .kompan_3{
+    width: 170px;
+    height: 35px;
+  }
+  .footer .colonki .silki .silki_1 {
+    width: 120px;
+    height: 48px;
+  }
+  .footer .colonki .silki .silki_2{
+    width: 120px;
+    height: 35px;
+  }
+  .footer .colonki .silki .silki_3{
+    width: 120px;
+    height: 35px;
+  }
+  .footer .colonki .silki .silki_4{
+    width: 120px;
+    height: 35px;
+  }
+  .footer .colonki .silki .silki_5{
+    width: 120px;
+    height: 35px;
+  }
+  
+}
+@media screen and (max-width: 766px) {
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  h1 {
+    font-size: 46px;
+  }
+
+  h2 {
+    font-size: 27px;
+  }
+
+  h3 {
+    font-size: 19px;
+  }
+
+  .hero_section {
+    width: 100%;
+  }
+
+  .brands_section {
+    margin-top: -15px;
+    padding-bottom: 0;
+  }
+
+  .what_is_chatgpt_section .what_is_chatgpt_section__top {
+    flex-direction: column;
+  }
+
+  .hero_section .hero_section__right img {
+    width: 85%;
+  }
+
+  .what_is_chatgpt_section .what_is_chatgpt_section__middle .middle__header {
+    width: auto;
+  }
+
+  .what_is_chatgpt_section .what_is_chatgpt_section__bottom {
+    flex-direction: column;
+  }
+
+  .what_is_chatgpt_section .what_is_chatgpt_section__bottom {
+    row-gap: 2rem;
+  }
+
+  .what_is_chatgpt_section {
+    row-gap: 3rem;
+  }
+
+  .what_is_chatgpt_section {
+    margin: 6rem 0 0;
+  }
+
+  .what_is_chatgpt_section
+    .what_is_chatgpt_section__bottom
+    .bottom__container
+    .container__content {
+    line-height: 1.5;
+  }
+
+  .exceeding_expectation .exceeding_expectation__right .right__container {
+    padding-left: 2%;
+    width: 355px;
+  }
+  .exceeding_expectation .exceeding_expectation__right .right__container .right__header {
+    width: 355px;
+  }
+  .exceeding_expectation .exceeding_expectation__right .right__container .container__content_2 {
+    width: 355px;
+    font-size: 14px;
+    line-height: 25px;
+    padding-right: 1%;
+  }
+  .blog_text .blog__left .text_blog__left {
+    font-size: 24px;
+    padding-left: 2%;
+  }
+  .blog {
+    margin-top: 0px;
+    margin-bottom: 25px;
+  }
+  .begin .begin_colon .begin__right .start_button button {
+    font-size: larger;
+  }
+  .footer {
+    height: 470px;
+  }
+  
+}
+
+@media screen and (max-width: 750px) {
+  a {
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 19px;
+  }
+
+  .hero_section .hero_section__left .left__cta_buttons input[type="text"] {
+    min-width: auto;
+  }
+
+  .future_here {
+    row-gap: 3rem;
+  }
+
+  .future_here .future_here__right .right__container {
+    flex-direction: column;
+  }
+
+  .future_here .future_here__right .right__container .container__header {
+    width: 100%;
+  }
+
+  .future_here .future_here__right .right__container .container__content {
+    width: 100%;
+  }
+
+  .future_here .future_here__right {
+    row-gap: 2rem;
+  }
+  .blog {
+    margin-top: 0px;
+  }
+  .footer .footer_end {
+    font-size: 30px;
+  }
+  .exceeding_expectation{
+    flex-direction: column;
+  }
+
+  .exceeding_expectation .exceeding_expectation__left{
+    width:100%;
+  }
+  .exceeding_expectation .exceeding_expectation__right{
+    width:100%;
+  }
+
+  .exceeding_expectation .exceeding_expectation__right .right__container{
+    width:100%;
+    margin-bottom: 0px;
+    
+  }
+
+  .exceeding_expectation .exceeding_expectation__right .right__container .right__header{
+    width:100%;
+    height: 60px;
+  }
+  .exceeding_expectation .exceeding_expectation__right .right__container .container__content_2{
+    width:100%;
+    height: 100px;
+  }
+
+  
+
+}
