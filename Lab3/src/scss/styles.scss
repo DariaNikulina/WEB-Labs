@@ -29,15 +29,14 @@
 body {
   background: #031b34;
   padding: 0 2rem;
- /*  overflow: auto;*/
-  overflow-x: hidden;
+  overflow: auto;
 }
 
 body.oh {
   overflow: hidden;
 }
 
-.page {
+#root {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -258,7 +257,7 @@ p {
   justify-content: space-between;
   column-gap: 1rem;
   /* min-height: 60vh; */
-  margin: 14rem 0 3rem;
+  padding: 14rem 0 3rem;
 }
 
 .hero_section .hero_section__left {
@@ -309,7 +308,7 @@ p {
   row-gap: 2rem;
   justify-content: center;
   align-items: center;
-  padding: 0 0 6rem 0;
+  padding: 3rem 0;
   column-gap: 3rem;
 }
 
@@ -402,9 +401,6 @@ p {
   flex: 2;
 }
 
-/* .future_here .future_here__left .left__header {
-} */
-
 .future_here .future_here__left .left__cta {
   color: #f49867;
   border-bottom: 1px solid transparent;
@@ -439,7 +435,6 @@ p {
   width: 55%;
   color: #81afdd;
 }
-
 /* Стили для четвертого экрана (Превосходя все ожидания) */
 
 .exceeding_expectation {
@@ -545,9 +540,7 @@ p {
   border: 1px solid #000000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10.7236px;
-  margin: 0rem;
-  margin-left:0;
-  margin-bottom: 100px;
+  margin: 10rem;
 }
 
 .begin .begin_colon{
@@ -555,13 +548,10 @@ p {
   display: flex;
   flex-direction: row;
   row-gap: 0rem 2rem;
-  width: 100%;
+  width: 90%;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  align-self: center;
- 
- 
 }
 
 .begin .begin_colon .begin__left{
@@ -593,7 +583,8 @@ p {
 }
 
 .begin .begin_colon .begin__right{
-  margin-right:10%;
+  /* display: flex;
+  width: 30%; */
   display: flex;
   width: 70%;
   justify-content: flex-start;
@@ -656,93 +647,399 @@ button:hover {
 
 /* Стили для ТЕКСТА шестого экрана (Блог) */
 
-.blog_section .all_news {
+.blog_text {
   display: flex;
-  flex-direction: row;
-  column-gap: 3rem;
-}
-
-.blog_section .all_news .main_news {
-  display: flex;
-  flex-direction: column;
-  max-height: 669px;
-}
-
-.blog_section .all_news .news_img {
-  width: 328px;
-}
-
-.blog_section .all_news .main_news .content_main_news {
-  display: flex;
-  height: 100%;
-  width: 100%;
-}
-
-.blog_section .all_news .all_other_news {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  row-gap: 2rem;
   column-gap: 2rem;
+  min-height: 0vh;
+  align-items: flex-end;
+  align-content: space-between;
 }
 
-.blog_section .all_news .all_other_news .content_other_news {
-  width: 328px;
+.blog_text .blog__left {
+  height: 100%;
 }
 
-.news {
-  background-color: #042C54;
-  margin-top: -5px;
-  padding: 15px 15px 20px 15px;
+.blog_text .blog__left .text_blog__left{
+  /* Многое Происходит, Мы Ведем об Этом Блог. */
+  height: 150px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 62px;
+  line-height: 75px;
+  letter-spacing: -0.04em;
+  background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.blog_text .blog__right {
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  row-gap: 3rem;
+  width: 75%;
+}
+
+/* Стили для шестого экрана (Блог) */
+
+.blog {
+  display: flex;
+  column-gap: 3rem;
+  min-height: 30vh;
+  align-items: stretch;
+  align-content: stretch;
+  margin: 6rem 4rem 6rem 4rem;
+  flex-direction: row;
+  justify-content: left;
+ 
+}
+
+.blog .blog__left {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  row-gap: 3rem;
+  width: 35%;
+}
+
+.blog .blog__left .box_1 {
+  height: 100%;
+}
+
+.blog .blog__left .box_1 img {
+  width: 100%;
+}
+
+.blog .blog__left .box_1 .one_1 {
+  /* Rectangle 20 */
+  width: 100%;
+  height: 100%;
+  background: #042C54;
+  padding: 2rem;
+
+}
+
+.blog .blog__left .box_1 .one_1 .text_start_1{
+  /* Сент 26, 2021 */
+  width: 357px;
+  height: 35px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 11.649px;
+  line-height: 35px;
+  /* identical to box height, or 300% */
+  color: #FFFFFF;
+}
+
+.blog .blog__left .box_1 .one_1 .text_1{
+  /* GPT-3 и Openai – это будущее. Давайте разберемся, как это? */
+  width: 342.18px;
+  height: 90.86px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 25.11px;
+  line-height: 30px;
+  /* or 121% */
+  color: #FFFFFF;
+}
+
+.blog .blog__left .box_1 .one_1 a{
+  /* Читать полную статью */
+  /* position: absolute; */
+  width: 148px;
+  height: 35px;
+  left: 561px;
+  top: 4405px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 400px;
+  /* identical to box height, or 291% */
+  color: #FFFFFF;
+}
+
+.blog .blog__left .box_1 .one_1 a:hover{
+  border-bottom: 1px solid #ffffff;
+}
+
+
+.blog .blog__middle {
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   row-gap: 2rem;
-  align-items: flex-start;
-
+  width: 70%;
+  flex-wrap: wrap;
+  
 }
 
-.news p {
-  font-size: 12px;
+.blog .blog__left .box_2 {
+  height: 100%;
+  width:50%;
+  margin-left: 2rem;
 }
 
-.news h3 {
+.blog .blog__left .box_2 img {
+  width: 100%;
+}
+
+.blog .blog__middle .box_2 .one_2{
+  /* Rectangle 20 */
+  /* Rectangle 21 */
+  width: 327.34px;
+  height: 193.37px;
+  background: #042C54;
+  padding: 1rem 1.5rem;
+}
+
+.blog .blog__middle .box_2 .one_2 .text_start_2{
+  /* Сент 26, 2021 */
+  width: 284px;
+  height: 35px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 11.649px;
+  line-height: 35px;
+  /* identical to box height, or 300% */
+  color: #FFFFFF;
+}
+
+.blog .blog__middle .box_2 .one_2 .text_2{
+  /* GPT-3 и Openai – это будущее. Давайте разберемся, как это? */
+  width: 284.23px;
+  height: 90.86px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
   font-size: 19px;
+  line-height: 30px;
+  /* or 159% */
+  color: #FFFFFF;
 }
 
-.news a {
+.blog .blog__middle .box_2 .one_2 a{
+  /* Читать полную статью */
+  width: 284px;
+  height: 35px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
   font-size: 12px;
-  margin-top: auto;
-  border-bottom: 1px solid transparent;
+  line-height: 35px;
+  /* identical to box height, or 291% */
+  color: #FFFFFF;
+}
+.blog .blog__middle .box_2 .one_2 a:hover{
+  border-bottom: 1px solid #ffffff;
 }
 
-.news a:hover {
-  color: #f49867;
-  border-bottom: 1px solid #f49867;
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
+.blog .blog__left .box_3 {
+  height: 100%;
 }
 
-.step_into_future{
-  /* Background */
+.blog .blog__left .box_3 img {
   width: 100%;
-  /*height: 950px;*/
+}
+
+.blog .blog__middle .box_3 .one_3{
+  /* Rectangle 20 */
+  /* Rectangle 21 */
+  width: 327.34px;
+  height: 193.37px;
+  background: #042C54;
+  padding: 1rem 1.5rem;
+}
+
+.blog .blog__middle .box_3 .one_3 .text_start_3{
+  /* Сент 26, 2021 */
+  width: 284px;
+  height: 35px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 11.649px;
+  line-height: 35px;
+  /* identical to box height, or 300% */
+  color: #FFFFFF;
+}
+
+.blog .blog__middle .box_3 .one_3 .text_3{
+  /* GPT-3 и Openai – это будущее. Давайте разберемся, как это? */
+  width: 284.23px;
+  height: 90.86px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 19px;
+  line-height: 30px;
+  /* or 159% */
+  color: #FFFFFF;
+}
+
+.blog .blog__middle .box_3 .one_3 a{
+  /* Читать полную статью */
+  width: 284px;
+  height: 35px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 35px;
+  /* identical to box height, or 291% */
+  color: #FFFFFF;
+}
+
+.blog .blog__middle .box_3 .one_3 a:hover{
+  border-bottom: 1px solid #ffffff;
+}
+
+
+.blog .blog__right {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 2rem;
+  width: 75%;
+}
+
+.blog .blog__right .box_4 {
+  height: 100%;
+}
+
+.blog .blog__right .box_4 img {
+  width: 100%;
+}
+
+.blog .blog__right .box_4 .one_4{
+  /* Rectangle 20 */
+  /* Rectangle 21 */
+  width: 327.34px;
+  height: 193.37px;
+  background: #042C54;
+  padding: 1rem 1.5rem;
+}
+
+.blog .blog__right .box_4 .one_4 .text_start_4{
+  /* Сент 26, 2021 */
+  width: 284px;
+  height: 35px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 11.649px;
+  line-height: 35px;
+  /* identical to box height, or 300% */
+  color: #FFFFFF;
+}
+
+.blog .blog__right .box_4 .one_4 .text_4{
+  /* GPT-3 и Openai – это будущее. Давайте разберемся, как это? */
+  width: 284.23px;
+  height: 90.86px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 19px;
+  line-height: 30px;
+  /* or 159% */
+  color: #FFFFFF;
+}
+
+.blog .blog__right .box_4 .one_4 a{
+  /* Читать полную статью */
+  width: 284px;
+  height: 35px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 35px;
+  /* identical to box height, or 291% */
+  color: #FFFFFF;
+}
+
+.blog .blog__right .box_4 .one_4 a:hover{
+  border-bottom: 1px solid #ffffff;
+}
+.blog .blog__right .box_5 {
+  height: 100%;
+}
+
+.blog .blog__right .box_5 img {
+  width: 100%;
+}
+
+.blog .blog__right .box_5 .one_5{
+  /* Rectangle 20 */
+  /* Rectangle 21 */
+  width: 327.34px;
+  height: 193.37px;
+  background: #042C54;
+  padding: 1rem 1.5rem;
+}
+
+.blog .blog__right .box_5 .one_5 .text_start_5{
+  /* Сент 26, 2021 */
+  width: 284px;
+  height: 35px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 11.649px;
+  line-height: 35px;
+  /* identical to box height, or 300% */
+  color: #FFFFFF;
+}
+
+.blog .blog__right .box_5 .one_5 .text_5{
+  /* GPT-3 и Openai – это будущее. Давайте разберемся, как это? */
+  width: 284.23px;
+  height: 90.86px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 19px;
+  line-height: 30px;
+  /* or 159% */
+  color: #FFFFFF;
+}
+
+.blog .blog__right .box_5 .one_5 a{
+  /* Читать полную статью */
+  width: 284px;
+  height: 35px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 35px;
+  /* identical to box height, or 291% */
+  color: #FFFFFF;
+}
+.blog .blog__right .box_5 .one_5 a:hover{
+  border-bottom: 1px solid #ffffff;
+}
+.footer{
+  /* Background */
+  width: 1440px;
+  height: 950px;
   background: #031B34;
   margin: 0;
 
 }
-section.step_into_future{
-  /* Background */
-  width: 100%;
-  /*height: 950px;*/
-  background: #031B34;
-  margin: 0;
-  align-self: center;
-}
 
-.step_into_future .footer_end{
+
+.footer .footer_end{
   /* Хотите Шагнуть в Будущее Раньше Других? */
   font-family: 'Manrope';
   font-size: 62px;
@@ -753,10 +1050,9 @@ section.step_into_future{
   /* Хотите Шагнуть в Будущее Раньше Других? */
   font-style: normal;
   text-align: center;
-
 }
 
-.step_into_future .footer_button{
+.footer .footer_button{
   /* Fill */
   box-sizing:border-box;
   border-style: hidden;
@@ -767,11 +1063,11 @@ section.step_into_future{
   text-align: center;
 }
 
-.step_into_future .footer_button a{
+.footer .footer_button a{
   cursor: pointer;
 }
 
-.step_into_future .footer_button button{
+.footer .footer_button button{
   cursor: pointer;
   font-family: 'Manrope';
   font-style: normal;
@@ -786,7 +1082,7 @@ section.step_into_future{
   border-color: none;
   width:100%;
 }
-.step_into_future .footer_button a:hover,button:hover{
+.footer .footer_button a:hover,button:hover{
   transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
@@ -795,11 +1091,11 @@ section.step_into_future{
   
 }
 
-.step_into_future .footer_button button:hover{
+.footer .footer_button button:hover{
   background-color: #ae67fa;
 }
 
-.step_into_future .colonki{
+.footer .colonki{
   display: flex;
   column-gap: 4rem;
   min-height: 30vh;
@@ -810,43 +1106,33 @@ section.step_into_future{
   justify-content: center;
 }
 
-.step_into_future .colonki .gpt{
+.footer .colonki .gpt{
 
 }
 
-.footer {
-  display: flex;
-  flex-direction: row;
-  column-gap: 8rem;
-  margin: 7rem 0rem;
-  padding: 10px;
+.footer .colonki .gpt .gpt_1{
+  width: 186px;
+  height: 48px;
 }
 
-.footer .footer_menu {
-  width: 66%;
-  display: flex;
-  flex-direction: row;
-  column-gap: 5rem;
-  row-gap: 3rem;
+.footer .colonki .gpt .gpt_2{
+  /* ул. Профессора Поздеева, 13, к.Г, Пермь, Пермский край, 614013 Все права защищены */
+width: 186px;
+height: 48px;
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 300;
+font-size: 12px;
+line-height: 16px;
+color: #FFFFFF;
+opacity: 0.5;
 }
 
-.footer .columm_menu {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  row-gap: 1rem;
-
+.footer .colonki .silki{
+  
 }
-
-.footer a,
-p {
-  font-size: 12px;
-  border-bottom: 1px solid transparent;
-}
-
-.footer a:hover {
-  color: #f49867;
-  border-bottom: 1px solid #f49867;
+.footer .colonki .silki a:hover{
+  border-bottom: 1px solid #FFFFFF;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -854,17 +1140,166 @@ p {
   -o-transition: all 0.3s ease;
 }
 
-/* Надпись "© 2023 GPT-3. Все права защищены." */
-
-.law_protected  {
-  width: 100%;
-}
-.law_protected .end {
-  width: 20%;
-  margin-left:40%;
+.footer .colonki .silki .silki_1{
+  width: 186px;
+  height: 48px;
 }
 
-.law_protected .end .text_end{
+.footer .colonki .silki .silki_2{
+  width: 186px;
+  height: 48px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.footer .colonki .silki .silki_3{
+  width: 186px;
+  height: 48px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.footer .colonki .silki .silki_4{
+  width: 186px;
+  height: 48px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.footer .colonki .silki .silki_5{
+  width: 186px;
+  height: 48px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.footer .colonki .kompan a:hover{
+  border-bottom: 1px solid #FFFFFF;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  
+}
+
+.footer .colonki .kompan .kompan_1{
+  width: 186px;
+  height: 48px;
+}
+
+.footer .colonki .kompan .kompan_2{
+  width: 186px;
+  height: 48px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.footer .colonki .kompan .kompan_3{
+  width: 186px;
+  height: 48px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.footer .colonki .kompan .kompan_4{
+  width: 186px;
+  height: 48px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.footer .colonki .kontakt a:hover{
+  border-bottom: 1px solid #FFFFFF;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  
+}
+
+.footer .colonki .kontakt .kontakt_1{
+  width: 186px;
+  height: 48px;
+}
+
+.footer .colonki .kontakt .kontakt_2{
+  width: 186px;
+  height: 48px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.footer .colonki .kontakt .kontakt_3{
+  width: 186px;
+  height: 48px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.footer .colonki .kontakt .kontakt_4{
+  width: 186px;
+  height: 48px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.end {
+  height: 100%;
+}
+
+.end .text_end{
   /* © 2023 GPT-3. Все права защищены. */
   height: 16px;
   font-family: 'Manrope';
@@ -873,71 +1308,124 @@ p {
   font-size: 12px;
   line-height: 16px;
   color: #FFFFFF;
-  align-self: center;
-
 }
 
 /* Медиа запросы для адаптива */
 @media screen and (max-width: 1230px) {
   
  
-  .all_news {
-    row-gap: 2rem;
-    flex-direction: column !important;
+  .blog_text{
+    width:90%;
+    margin-left:5%;
+  }
+  .blog_text .blog__right{
+    width:0%;
+  }
+  .blog_text .blog__left {
+    width:100%;
+    height: 60px;
+    padding-left: 5%;
+    padding-right: 2%;
+  }
+  .blog_text .blog__left .text_blog__left {
+    font-size: 36px;
+    width:100%;
+    height: 60px;
+    padding-left: 5%;
+    padding-right: 2%;
   }
 
-  .main_news {
-    flex-direction: row !important;
-    justify-content: center;
-  }
-
-  .blog_section .all_news .main_news img {
-    max-width: 328px;
-  }
-
-  .content_main_news {
-    width: 360px !important;
-    height: 227px !important;
-  }
-
-  .all_other_news {
-    justify-content: center;
-    margin: auto;
-    max-width: 700px;
-  }
-
-  .news {
-    margin-top: 0;
-  }
-
-  .content_other_news {
-    margin-top: -5px;
-  }
-
-
- .blog_section .main_news {
-    flex-direction: column !important;
-    margin: auto;
-  }
-
-  .blog_section .main_news .content_main_news {
-    width: 328px !important;
-    height: 350px;
-  }
-
-  .blog_section .all_other_news {
-    flex-direction: column !important;
-  }
-
-  
-
-}
-@media screen and (max-width: 1024px) {
-  .header {
+  .blog{
+    display:flex;
     flex-direction: column;
-   
+  }
+  .blog .blog__middle{
+    flex-direction: row;
+  }
+  .blog .blog__right{
+    flex-direction: row;
+  }
+  .blog .blog__left .box_1 img{
+    width:90%;
+    margin-left:5%;
+  }
+  .blog .blog__left .box_1 .one_1 {
+    width:90%;
+    height: 25%;
+    margin-left:5%;
+  }
+  .blog .blog__left .box_1 .one_1 .text_1{
+    width:100%;
+    
+  }
+  .blog .blog__left .box_1 .one_1 a{
+    line-height: 0px;
+  }
+  .blog .blog__middle{
+    width:90%;
+    margin-left:5%;
+    height: 373px;
+  }
+  .blog .blog__middle .box_2{
+    height: 100%;
+    width: 50%;
+  }
+  .blog .blog__middle .box_2 img{
+    width: 100%;
+    height: 172.12px;
+  }
+  .blog .blog__middle .box_2 .one_2 {
+    width: 100%;
+  }
+  .blog .blog__middle .box_2 .one_2 .text_2 {
+    width: 100%;
+  }
+  .blog .blog__middle .box_3{
+    width: 50%;
+  }
+  .blog .blog__middle .box_3 img{
+    width: 100%;
+    height: 172.12px;
+  }
+  .blog .blog__middle .box_3 .one_3 {
+    width: 100%;
+  }
+  .blog .blog__middle .box_3 .one_3 .text_3 {
+    width: 100%;
+  }
+  .blog .blog__right {
+    width:90%;
+    margin-left:5%;
+    height: 400px;
+  }
+  .blog .blog__right .box_4{
+    width: 50%;
+  }
+  .blog .blog__right .box_4 img{
+    width: 100%;
+    height: 172.12px;
+  }
+  .blog .blog__right .box_4 .one_4 {
+    width: 100%;
+  }
+  .blog .blog__right .box_4 .one_4 .text_4 {
+    width: 100%;
+  }
+  .blog .blog__right .box_5{
+    width: 50%;
+  }
+  .blog .blog__right .box_5 img{
+    width: 100%;
+    height: 172.12px;
+  }
+  .blog .blog__right .box_5 .one_5 {
+    width: 100%;
+  }
+  .blog .blog__right .box_5 .one_5 .text_5 {
+    width: 100%;
   }
   
+
 }
 @media screen and (max-width: 1024px) {
   .page {
@@ -966,7 +1454,6 @@ p {
     height: 100vh;
     z-index: 9999;
     background: #031b34;
-    
   }
 
   .header .header__menu {
@@ -995,7 +1482,6 @@ p {
     flex-direction: column;
     justify-content: center;
     column-gap: 0;
-    /* margin: 0; */
     width: 90%;
   }
 
@@ -1039,7 +1525,6 @@ p {
   .future_here .future_here__left {
     row-gap: 1rem;
   }
-  
   .exceeding_expectation{
     margin-left: 0%;
     margin-bottom: 0%;
@@ -1056,19 +1541,178 @@ p {
     font-size: 20px;
     
   }
- 
-  .step_into_future .footer_end {
-    padding: 100px 204px 60px;
+  .blog_text{
+    width:90%;
+    margin-left:5%;
+  }
+  .blog_text .blog__right{
+    width:0%;
+  }
+  .blog_text .blog__left {
+    width:100%;
+    height: 60px;
+    padding-left: 5%;
+    padding-right: 2%;
+  }
+  .blog_text .blog__left .text_blog__left {
+    font-size: 30px;
+    width:100%;
+    height: 60px;
+    padding-left: 5%;
+    padding-right: 2%;
   }
 
+  .blog{
+    display:flex;
+    flex-direction: column;
+  }
+  .blog .blog__middle{
+    flex-direction: row;
+  }
+  .blog .blog__right{
+    flex-direction: row;
+  }
+  .blog .blog__left .box_1 img{
+    width:90%;
+    margin-left:5%;
+  }
+  .blog .blog__left .box_1 .one_1 {
+    width:90%;
+    height: 25%;
+    margin-left:5%;
+  }
+  .blog .blog__left .box_1 .one_1 .text_1{
+    width:100%;
+    
+  }
+  .blog .blog__left .box_1 .one_1 a{
+    line-height: 0px;
+  }
+  .blog .blog__middle{
+    width:90%;
+    margin-left:5%;
+    height: 373px;
+  }
+  .blog .blog__middle .box_2{
+    height: 100%;
+    width: 50%;
+  }
+  .blog .blog__middle .box_2 img{
+    width: 100%;
+    height: 172.12px;
+  }
+  .blog .blog__middle .box_2 .one_2 {
+    width: 100%;
+  }
+  .blog .blog__middle .box_2 .one_2 .text_2 {
+    width: 100%;
+  }
+  .blog .blog__middle .box_3{
+    width: 50%;
+  }
+  .blog .blog__middle .box_3 img{
+    width: 100%;
+    height: 172.12px;
+  }
+  .blog .blog__middle .box_3 .one_3 {
+    width: 100%;
+  }
+  .blog .blog__middle .box_3 .one_3 .text_3 {
+    width: 100%;
+  }
+  .blog .blog__right {
+    width:90%;
+    margin-left:5%;
+    height: 400px;
+  }
+  .blog .blog__right .box_4{
+    width: 50%;
+  }
+  .blog .blog__right .box_4 img{
+    width: 100%;
+    height: 172.12px;
+  }
+  .blog .blog__right .box_4 .one_4 {
+    width: 100%;
+  }
+  .blog .blog__right .box_4 .one_4 .text_4 {
+    width: 100%;
+  }
+  .blog .blog__right .box_5{
+    width: 50%;
+  }
+  .blog .blog__right .box_5 img{
+    width: 100%;
+    height: 172.12px;
+  }
+  .blog .blog__right .box_5 .one_5 {
+    width: 100%;
+  }
+  .blog .blog__right .box_5 .one_5 .text_5 {
+    width: 100%;
+  }
+  .footer .footer_end {
+    padding: 100px 204px 60px;
+  }
 }
 @media screen and (max-width: 990px) {
-  .step_into_future {
+  .footer {
     height: 470px;
   }
-  .step_into_future .footer_end {
+  .footer .footer_end {
     font-size: 36px;
     padding: 5px 204px 60px;
+  }
+  .footer .colonki {
+    column-gap: 0rem;
+    margin-top: 4rem;
+    margin-right: 1rem;
+    margin-bottom: 0px;
+  }
+  .footer .colonki .gpt {
+    width: 170px;
+    height: 48px;
+  }
+  .footer .colonki .gpt .gpt_1 {
+    width: 160px;
+    height: 48px;
+  }
+  .footer .colonki .gpt .gpt_2 {
+    width: 160px;
+  }
+  .footer .colonki .silki {
+    width: 120px;
+  }
+  .footer .colonki .kompan {
+    width: 170px;
+  }
+  .footer .colonki .kompan .kompan_2{
+    width: 170px;
+    height: 35px;
+  }
+  .footer .colonki .kompan .kompan_3{
+    width: 170px;
+    height: 35px;
+  }
+  .footer .colonki .silki .silki_1 {
+    width: 120px;
+    height: 48px;
+  }
+  .footer .colonki .silki .silki_2{
+    width: 120px;
+    height: 35px;
+  }
+  .footer .colonki .silki .silki_3{
+    width: 120px;
+    height: 35px;
+  }
+  .footer .colonki .silki .silki_4{
+    width: 120px;
+    height: 35px;
+  }
+  .footer .colonki .silki .silki_5{
+    width: 120px;
+    height: 35px;
   }
   
 }
@@ -1132,7 +1776,6 @@ p {
     .container__content {
     line-height: 1.5;
   }
-
   .exceeding_expectation .exceeding_expectation__right .right__container {
     padding-left: 2%;
     width: 355px;
@@ -1146,17 +1789,24 @@ p {
     line-height: 25px;
     padding-right: 1%;
   }
-  
+  .blog_text .blog__left .text_blog__left {
+    font-size: 24px;
+    padding-left: 2%;
+  }
+  .blog {
+    margin-top: 0px;
+    margin-bottom: 25px;
+  }
   .begin .begin_colon .begin__right .start_button button {
     font-size: larger;
   }
-  .step_into_future {
+  .footer {
     height: 470px;
   }
   
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 765px) {
   a {
     font-size: 12px;
   }
@@ -1196,8 +1846,10 @@ p {
   .future_here .future_here__right {
     row-gap: 2rem;
   }
-  
-  .step_into_future .footer_end {
+  .blog {
+    margin-top: 0px;
+  }
+  .footer .footer_end {
     font-size: 30px;
   }
   .exceeding_expectation{
@@ -1227,5 +1879,4 @@ p {
   }
 
   
-
 }

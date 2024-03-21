@@ -1,30 +1,71 @@
-import { createContacts } from "./elements/footerElements/createContacts.js"
-import { createGPT3 } from "./elements/footerElements/createGPT3.js"
-import { createLinks } from "./elements/footerElements/createLinks.js"
+ export const createDescriptionTemplate = ({title}) => {
+    return `
+    <h1 class="footer_end">${title}</h1>
+    `;
+  };
+  export const createButtonTemplate = ({ title, href }) => {
+    return `
+    <a href="${href}" class="footer_button_text"><button>${title}</button></a>
+    `;
+  };
+  export const createLinksTemplate = ({title, href}, name)=> {
+    return `
+          <p class="${name}_2">
+            <a href="${href}">${title}</a>
+          </p>
+    `;
+  };
 
+  
+  export const createKolonkiTemplate = ({title, links}, name)=> {
+    const LinkTemplate = links
+    .map((link) => createLinksTemplate(link,name))
+    .join('');
 
-
-export const footerTemplate = ({
-    gpt3,
-    link,
-    company,
-    contacts
-}) => {
-    const gpt3Template = createGPT3(gpt3);
-    const linkTemplate = createLinks(link, "link columm_menu");
-    const companyTemplate = createLinks(company, "company columm_menu");
-    const contactsTemplate = createContacts(contacts);
+    return `
+        <div class="${name}">
+          <p class="${name}_1">
+            ${title}
+          </p>
+          ${LinkTemplate}
+          </div>
+    `;
+  };
+  
+  
+  
+  
+  export const footerTemplate = ({
+    one,
+    two,
+    three,
+    four,
+    text,
+    buttonData
+  }) => {
+    const ButtonTemplate = createButtonTemplate(buttonData);
+    const descriptionTemplate = createDescriptionTemplate(text);
+    const oneTemplate = createKolonkiTemplate(one,"gpt");
+    const twoTemplate = createKolonkiTemplate(two,"silki");
+    const threeTemplate = createKolonkiTemplate(three,"kompan");
+    const fourTemplate = createKolonkiTemplate(four,"kontakt");
 
     const resultTemplate = `
-        <div class="gpt-3 columm_menu">
-            ${gpt3Template}
-        </div>
-        <div class="footer_menu">
-            ${linkTemplate}
-            ${companyTemplate}
-            ${contactsTemplate}
-        </div>
-    `;
-
-    return resultTemplate
-}
+    
+          ${descriptionTemplate}
+          <div class="footer_button">
+          ${ButtonTemplate}
+          </div>
+      
+      <div class="colonki">
+          ${oneTemplate}
+          ${twoTemplate}
+          ${threeTemplate}
+          ${fourTemplate}
+      </div>
+      
+      `;
+  
+    return resultTemplate;
+  };
+  

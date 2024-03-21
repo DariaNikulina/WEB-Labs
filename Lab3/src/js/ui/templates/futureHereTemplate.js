@@ -1,11 +1,12 @@
-import { createH3Elements } from "./elements/SimpleElements/createH3Elements.js"
-import { createPElements } from "./elements/SimpleElements/createPElements.js";
-
 export const rightContainerTemplate = ({ title, description }) => {
   const template = `
     <div class="right__container">
-      ${createH3Elements(title, "container__header lined_header")}
-      ${createPElements(description, "container__content")}
+    <h3 class="container__header lined_header">
+        ${title}
+    </h3>
+    <p class="container__content">
+        ${description}
+    </p>
     </div>
 `;
 
@@ -14,7 +15,7 @@ export const rightContainerTemplate = ({ title, description }) => {
 
 export const futureHereTemplate = (data) => {
   // console.log(data);
-  const rightContainerTpl = data.map((item) => rightContainerTemplate(item)).join("");
+  const rightContainerTpl = data.map((item) => rightContainerTemplate(item));
 
   const parentTemplate = `
     <div class="future_here__left">

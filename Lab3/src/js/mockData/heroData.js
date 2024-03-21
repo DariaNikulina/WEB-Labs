@@ -10,7 +10,7 @@ export const heroCtaButtons = [
 ];
 
 export const illustration = {
-  src: "./assets/img/Illustration.png",
+  src: "./assets/img/Illustration.svg",
   alt: "gpt3",
 };
 
@@ -26,5 +26,3 @@ export const heroData = {
   heroCtaButtons,
   illustration,
 };
-
-export default heroData

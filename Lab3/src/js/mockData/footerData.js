@@ -1,64 +1,91 @@
-export const gpt3 =
+export const text =
 {
-    header: "GPT-3",
-    description: `ул. Профессора Поздеева, 13, к.Г,
-                Пермь, Пермский край, 614013
-                Все права защищены`
+    title: "Хотите Шагнуть в Будущее Раньше Других?"
+};
+ export const buttonData = 
+ {
+    title: "Запросить ранний доступ",
+    href: "#"
+ };
 
+
+export const one =
+{    title: "GPT-3",
+    
+    links: [
+    {
+        title: " ул. Профессора Поздеева, 13, к.Г,Пермь, Пермский край, 614013 Все права защищены",
+        href: "#"
+    }]
 };
 
-export const link = {
-    header: "Ссылки",
-    linkElements: [
+export const two =
+{
+    title: "Ссылки",
+    links:[
         {
-            href: "#",
-            title: "Овероны"
+            title: "Овероны",
+            href: "#"
         },
         {
-            href: "#",
-            title: "Соц. сети"
+            title: "Соц. сети",
+            href: "#"
         },
         {
-            href: "#",
-            title: "Счетчик"
+            title: "Счетчики",
+            href: "#"
         },
         {
-            href: "#",
-            title: "Контакты"
+            isPrimary: false,
+            title: "Контакты",
+            href: "#"
         }
     ]
 };
 
-export const company = {
-    header: "Компания",
-    linkElements: [
-        {
-            href: "#",
-            title: "Условия использования"
-        },
-        {
-            href: "#",
-            title: "Перс. данные"
-        },
-        {
-            href: "#",
-            title: "Контакты"
-        }
-    ]
+export const three =
+{   title: "Компания",
+    links:[
+    {
+        title: "Условия использования",
+        href: "#"
+    },
+    {
+        title: "Перс. данные",
+        href: "#"
+    },
+    {
+        title: "Контакты",
+        href: "#"
+    }]
 };
 
-export const contacts = {
-    header: "Контакты",
-    adress: "ул. Профессора Поздеева, 13, к.Г, Пермь",
-    phoneNumber: "+7 (342) 2-198-520",
-    email: "info@pstu.ru"
+export const four =
+{
+    title: "Контакты",
+    links:
+    [{
+        title: "ул. Профессора Поздеева, 13, к.Г, Пермь",
+        href: "#"
+    },
+    {
+        title: "+7 (342) 2-198-520",
+        href: "#"
+    },
+    {
+        title: "info@pstu.ru",
+        href: "#"
+    }]
 };
 
-export const footerData = {
-    gpt3,
-    link,
-    company,
-    contacts
-};
 
-export default footerData
+export const footerData={
+    one,
+    two,
+    three,
+    four,
+    text,
+    buttonData
+
+};
+export default footerData;

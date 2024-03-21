@@ -45,8 +45,7 @@
     "sass": "^1.49.11",
     "webp-converter": "2.2.3",
     "webpack": "^5.74.0",
-    "webpack-stream": "^7.0.0",
-    "readable-stream": "^3.6.0"
+    "webpack-stream": "^7.0.0"
   },
   "repository": {
     "type": "git",
