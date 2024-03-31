@@ -12,10 +12,17 @@ const isFooterDataValid = (data) => {
   // проверяем внутренний массив на наличие полей и соответствие типу "массив"
   isArrayHasLength(massiveData);
 
-  // проверяем внутренние объекты на наличие полей и соответствие типу "объект"
-  massiveData.forEach((item) => isObjectHasProps(item, ["classname", "title","links"]),
-  links.forEach((link)=>isObjectHasProps(link,["classname","title","href"]))
-  );
+  massiveData.forEach(item => {
+    isObjectHasProps(item, ["classname", "title","links"]);
+    const {classname,title,links} = item;
+    isArrayHasLength(links);
+    links.forEach(link =>{
+    isObjectHasProps(link,["classname","title","href"]);
+    })
+});
+
+ 
+  
 
 };
 

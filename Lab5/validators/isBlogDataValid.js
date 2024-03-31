@@ -8,11 +8,16 @@ const isBlogDataValid = (data) => {
     throw new Error("Переданные данные - не массив или длина = 0");
 
   // пробегаем по массиву, ищем null'ы и отсутствующие аттрибуты
-  data.forEach((obj) => isObjectHasProps(obj, ["img", "rest"]),
-  isObjectHasProps(img, ["src", "alt"]),
-  isObjectHasProps(rest, ["title", "data","linkTitle","href","isPrimary"])
-  );
+ 
+  data.forEach(obj => {
+    isObjectHasProps(obj, ["img", "rest"]);
+    const  {img, rest} = obj;
+    isObjectHasProps(img, ["src", "alt"]);
+    isObjectHasProps(rest, ["title", "data","linkTitle","href","isPrimary"]);
+  });
 };
+
+
 
 module.exports = isBlogDataValid;
 
